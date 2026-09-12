@@ -654,7 +654,7 @@ function renderPeople() {
       </div>
       <button class="primary-btn" id="add-person-page">＋ 新增同事</button>
     </div>
-    <div class="color-legend">${COLOR_ORDER.map(key => `<span><i style="background:${COLOR_MAP[key].bg}"></i>${COLOR_MAP[key].label}色部門</span>`).join('')}</div>
+    <div class="color-legend">${COLOR_ORDER.map(key => `<span><i style="background:${COLOR_MAP[key].bg}"></i>${COLOR_MAP[key].label}色</span>`).join('')}</div>
     ${showForm ? personForm(editing) : ''}
     ${state.people.length ? `<div class="people-list">${peopleGrouped().map(person => `
       <div class="person-row">
@@ -688,7 +688,7 @@ function personForm(existing) {
     <section class="form-card person-form"><form id="person-form">
       <label>同事姓名<input name="personName" required value="${escHtml(existing?.name || '')}" placeholder="例如：王小明" autofocus></label>
       <div class="color-picker-group">
-        <span class="color-picker-label">部門顏色</span>
+        <span class="color-picker-label">顏色</span>
         <div class="color-picker">
           ${COLOR_ORDER.map(key => {
             const c = COLOR_MAP[key];
@@ -1174,7 +1174,7 @@ function renderHistory() {
 
 document.querySelector('.avatar')?.addEventListener('click', () => {
   document.querySelector('#avatar-message')?.remove();
-  document.body.insertAdjacentHTML('beforeend', `<div id="avatar-message" class="avatar-message" role="status"><span>🍱</span><p>請點餐，不是點我！</p><button type="button" aria-label="關閉">×</button></div>`);
+  document.body.insertAdjacentHTML('beforeend', `<div id="avatar-message" class="avatar-message" role="status"><span>🍱</span><p>請點餐，不是點我！</p><button type="button" aria-label="我錯了">×</button></div>`);
   const message = document.querySelector('#avatar-message');
   message.querySelector('button').onclick = () => message.remove();
   setTimeout(() => message.remove(), 3200);
