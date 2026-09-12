@@ -1174,7 +1174,7 @@ function renderHistory() {
 
 document.querySelector('.avatar')?.addEventListener('click', () => {
   document.querySelector('#avatar-message')?.remove();
-  document.body.insertAdjacentHTML('beforeend', `<div id="avatar-message" class="avatar-message" role="status"><span>🍱</span><p>請點餐，不是點我！</p><button type="button" aria-label="我錯了">×</button></div>`);
+  document.body.insertAdjacentHTML('beforeend', `<div id="avatar-message" class="avatar-message" role="status"><span>🍱</span><p>請點餐，不是點我！</p><button type="button" aria-label="關閉">×</button></div>`);
   const message = document.querySelector('#avatar-message');
   message.querySelector('button').onclick = () => message.remove();
   setTimeout(() => message.remove(), 3200);
