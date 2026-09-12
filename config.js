@@ -1,5 +1,5 @@
 window.LUNCH_CONFIG = {
-  supabaseUrl: 'https://wyakcfyoexbdlthbysso.supabase.co',
-  supabaseKey: 'sb_publishable_spP7L22Dxbj3tx8UpUHZtg_AsuJc1zt',
+  supabaseUrl: 'https://wlqgxvhycpbygxuwrvjv.supabase.co/rest/v1/',
+  supabaseKey: 'sb_publishable_YNZBRoCqHH9DeFXiPB9ZFQ_4tbJWXN5',
   adminPassword: '953618'
 };
