@@ -388,7 +388,7 @@ function bindMenuRemovals(selector, min = 1) {
 function renderCreateOrder() {
   app.innerHTML = `
     ${state.error ? `<div class="banner-error">${escHtml(state.error)}</div>` : ''}
-    <div class="hero-row"><div><div class="eyebrow">START A TEAM LUNCH</div><h1>開啟新訂單</h1><p class="hero-copy">設定餐廳、餐點和截止時間。建立後會立刻出現進行中分頁，同事可同時點餐且不會互相覆蓋。</p></div></div>
+    <div class="hero-row"><div><div class="eyebrow">START A TEAM LUNCH</div><h1>開啟新訂單</h1><p class="hero-copy">設定餐廳、餐點和截止時間。建立後會立刻出現進行中分頁。</p></div></div>
     <section class="form-card"><form id="order-form">
       <label>常用餐廳<select id="favorite-restaurant"><option value="">選擇後自動帶入餐點</option>${state.restaurants.map(item => `<option value="${item.id}">${escHtml(item.name)}</option>`).join('')}</select></label>
       <label>餐廳名稱<input name="restaurant" required placeholder="例如：日常食堂"></label>
@@ -471,7 +471,7 @@ function renderActive(order) {
       <div>
         <div class="eyebrow">OPEN ORDER · ${escHtml(deadlineLabel(order))}</div>
         <h1>一起點午餐</h1>
-        <p class="hero-copy">${escHtml(order.restaurant_name)} · 選人名、餐點與數量後送出。每人可幫同事點，資料即時同步。</p>
+        <p class="hero-copy">${escHtml(order.restaurant_name)} · 選人名、餐點與數量後送出。每人可幫同事點。</p>
       </div>
       <div class="hero-actions">
         <a class="outline-btn" href="#new-order">＋ 再開一單</a>
